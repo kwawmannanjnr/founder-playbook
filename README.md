@@ -16,6 +16,7 @@ Built for [Claude Code](https://claude.ai/claude-code) (auto-triggers based on y
 
 | Skill | Source | Use When |
 |-------|--------|----------|
+| **[founder-os](founder-os/README.md)** | **Operating System (your daily workflow)** | **Every day - integrates all frameworks into practical daily/weekly/monthly routines** |
 | **[diagnose](diagnose/SKILL.md)** | **Meta-skill (routes across all 14)** | **Don't know where to start, multiple problems, "nothing is working"** |
 | [mom-test](mom-test/SKILL.md) | The Mom Test - Rob Fitzpatrick | Customer interviews, validating ideas without leading questions |
 | [four-steps](four-steps/SKILL.md) | The Four Steps to the Epiphany - Steve Blank | Finding first customers, Customer Development, Market Type |
@@ -43,6 +44,31 @@ Business books have great frameworks buried in 300 pages of stories. You read th
 - **Integration maps** - Where frameworks from different books conflict or complement each other
 
 Each skill also includes an honest scope section: what the book got right, what's dated, and where it doesn't apply.
+
+## NEW: Founder Operating System
+
+**The missing piece:** Knowing the frameworks isn't enough. You need a **system** that tells you when to use which framework.
+
+**[Founder OS](founder-os/README.md)** is your daily workflow that integrates all 14 frameworks:
+
+- **Daily Standup** (10 min) - What's today's Single Most Important Task?
+- **Weekly Review** (45 min) - Honest progress check + framework health check
+- **Monthly Strategic** (2 hours) - Should you stay, pivot, or move to next stage?
+- **Decision Protocol** - Which framework applies to this choice?
+- **Anti-Pattern Detector** - Catch yourself making classic mistakes
+- **Metrics Dashboard** - Track only 2 metrics per stage
+
+**Quick start:** Read [founder-os/quick-start.md](founder-os/quick-start.md) (30 minutes)
+
+**Templates included:**
+- Daily standup template
+- Weekly review template  
+- Monthly strategic review template
+- Customer conversation tracker
+- Decision log
+- Metrics dashboard
+
+**Use this if:** You want to actually apply the frameworks consistently, not just read about them.
 
 ## How to Use
 
@@ -108,8 +134,9 @@ This means Claude loads ~100 tokens per skill at startup (just the description),
 For founders going from idea to scale:
 
 ```
-0.  diagnose              Don't know where to start? Start here.
-1.  four-steps            Find customers and validate the business model
+START:  founder-os            Daily system that integrates all frameworks
+0.      diagnose              Don't know where to start? Start here.
+1.      four-steps            Find customers and validate the business model
 2.  lean-startup          Build-Measure-Learn iteration speed
 3.  mom-test              How to talk to customers without biasing them
 4.  obviously-awesome     Position the product clearly
@@ -132,6 +159,21 @@ For founders going from idea to scale:
 - **Modern relevance notes** - Frameworks from the '90s and 2000s are flagged where they don't apply to 2025+ contexts (PLG, AI-native products, privacy regulations)
 - **Not summaries** - These are structured reference documents with decision trees, scoring rubrics, and fill-in templates. They're designed to be applied, not just read.
 
+## The Complete System
+
+This playbook has three layers:
+
+1. **Founder OS** - Your daily operating system (when to use which framework)
+2. **Diagnose** - Routes you to the right framework when stuck
+3. **14 Framework Skills** - Deep expertise for each business challenge
+
+**Example workflow:**
+
+*Monday morning:* Use Founder OS daily standup → Identifies constraint is "messaging" → Routes to storybrand  
+*Monday work:* Apply storybrand BrandScript to homepage  
+*Friday review:* Founder OS weekly review → Measure if messaging improved  
+*Next month:* Founder OS strategic review → Decide if ready for next stage
+
 ## Example
 
 Ask your LLM: *"I built an AI tool, talked to 30 people who said they love it, but zero have paid. What's wrong?"*
@@ -139,6 +181,8 @@ Ask your LLM: *"I built an AI tool, talked to 30 people who said they love it, b
 Without these skills: generic advice about product-market fit.
 
 With these skills: Claude loads Mom Test (those 30 people were probably being polite - here's what questions to ask instead), Four Steps (you skipped Customer Validation - here's the earlyvangelist pain hierarchy to score them), Lean Startup (your value hypothesis isn't validated - here's innovation accounting to measure real demand), and StoryBrand (your website probably talks about you instead of the customer's problem - here's the BrandScript to fix it).
+
+With Founder OS: You run the diagnose skill (via daily standup), it catches this is a "Lots of Interest, No Money" anti-pattern, routes you to mom-test + four-steps, and gives you this week's SMITs: (1) Re-interview the 30 people with mom-test questions about past behavior, (2) Score them on earlyvangelist hierarchy, (3) Ask the top 5 for money today. Your weekly review measures how many actually paid.
 
 ## Source Books
 
