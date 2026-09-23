@@ -2,6 +2,8 @@
 
 > The practical daily workflow that integrates all 14 business frameworks into how you actually work.
 
+> **NEW to this entire playbook?** [**→ GETTING STARTED GUIDE**](../GETTING-STARTED.md) **←** (30 min complete onboarding)
+
 ## What This Is
 
 You have 14 excellent business frameworks. The Founder OS is the **system** that helps you use them effectively:
