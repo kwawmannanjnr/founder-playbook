@@ -101,10 +101,10 @@ export function planLabel(plan: PlanId): string {
   switch (plan) {
     case "free":
       return "Free";
-    case "plus_monthly":
-      return "Plus monthly";
-    case "plus_annual":
-      return "Plus annual";
+    case "pro":
+      return "Pro";
+    case "family":
+      return "Family";
   }
 }
 

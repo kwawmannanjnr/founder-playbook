@@ -1,7 +1,13 @@
 export const DEMO_AS_OF = "2026-04-16T15:00:00.000Z";
 export const FREE_DRAFT_LIMIT = 1;
 
-export type PlanId = "free" | "plus_monthly" | "plus_annual";
+export type PlanId = "free" | "pro" | "family";
+
+export function normalizePlan(value: unknown): PlanId {
+  if (value === "free" || value === "pro" || value === "family") return value;
+  if (value === "plus_monthly" || value === "plus_annual") return "pro";
+  return "free";
+}
 export type Phase = "welcome" | "results" | "ready";
 export type ConnectionProvider = "plaid_preview" | "csv" | "sample";
 export type ConnectionStatus = "healthy" | "attention" | "disconnected";

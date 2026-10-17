@@ -2,7 +2,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
 
 import { buildSampleState } from "./demo";
-import { emptyState, type AppState, type Profile } from "./model";
+import { emptyState, normalizePlan, type AppState, type Profile } from "./model";
 import { reduce, type Action } from "./workflow";
 
 const STORAGE_KEY = "moneyback.state.v1";
@@ -28,7 +28,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
         try {
           const parsed = JSON.parse(raw) as AppState;
           if (parsed?.phase && Array.isArray(parsed.transactions) && Array.isArray(parsed.opportunities)) {
-            setState(parsed);
+            setState({ ...parsed, plan: normalizePlan(parsed.plan) });
           }
         } catch {
           setState(emptyState());

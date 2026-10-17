@@ -9,21 +9,21 @@ import { colors, fonts } from "@/src/theme";
 const PLANS: Array<{ id: PlanId; name: string; price: string; points: string[] }> = [
   {
     id: "free",
-    name: "Free",
+    name: "Free scan",
     price: "$0",
-    points: ["Manual scan", "Opportunity review", "One recovery draft", "Basic dashboard"],
+    points: ["One-time money scan", "Opportunity review", "One recovery draft", "Basic dashboard"],
   },
   {
-    id: "plus_monthly",
-    name: "MoneyBack Plus",
-    price: "$12.99/month",
-    points: ["Ongoing monitoring in a live build", "Unlimited drafts, fair use", "Case tracking and follow-ups", "Refund verification"],
+    id: "pro",
+    name: "MoneyBack Pro",
+    price: "$14.99/month",
+    points: ["Ongoing protection after the first recovery", "Unlimited drafts, fair use", "Case tracking, follow-ups, and refund verification", "Price-change and recurring-bill monitoring in a live build"],
   },
   {
-    id: "plus_annual",
-    name: "Annual Plus",
-    price: "$99/year",
-    points: ["Everything in Plus", "A lower yearly price", "Same approval rules"],
+    id: "family",
+    name: "MoneyBack Family",
+    price: "$24.99/month",
+    points: ["Household subscriptions and shared protection", "Everything in Pro", "Same approval rules for every request", "Shared member logins are not in this preview"],
   },
 ];
 
@@ -41,8 +41,8 @@ export default function Upgrade() {
   return (
     <Screen>
       <Eyebrow>Plans</Eyebrow>
-      <Title size={32}>Use it free. Upgrade when the tracking is worth it.</Title>
-      <Body>No card is charged in this preview. Plus is selected locally so you can see the difference. A production app would use a reviewed billing provider.</Body>
+      <Title size={32}>Pay for protection, not for a single refund.</Title>
+      <Body>The free scan shows whether anything looks recoverable. Pro and Family are the ongoing agent. Prices match the $14.99 and $24.99 plan mix. No card is charged in this preview, and an annual discount is not offered here because it would lower realized monthly revenue.</Body>
       {PLANS.map((plan) => {
         const selected = state.plan === plan.id;
         return (

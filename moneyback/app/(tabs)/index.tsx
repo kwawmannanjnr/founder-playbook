@@ -45,7 +45,10 @@ export default function Dashboard() {
         {metrics.pending > 0 ? <Text style={styles.pending}>{money(metrics.pending)} is a merchant reply still waiting on a credit. It is inside potential, and it is not verified.</Text> : null}
       </Card>
 
-      {state.sampleHousehold ? <Text style={styles.sample}>Sample household through April 16, 2026. These are not your accounts, and the bank link is simulated.</Text> : null}
+      <Text style={styles.sample}>
+        Protection stays on after a recovery. The point of a paid plan is the next mistake, not only the one already found.
+        {state.sampleHousehold ? " Sample household through April 16, 2026. These are not your accounts, and the bank link is simulated." : ""}
+      </Text>
 
       <Text style={styles.section}>Needs your attention</Text>
       {attention.length === 0 ? <Text style={styles.empty}>Nothing is waiting on you.</Text> : null}

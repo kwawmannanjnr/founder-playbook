@@ -2,7 +2,7 @@
 
 React Native (Expo) consumer app for the MoneyBack AI recovery MVP.
 
-It imports a sample household or a transaction CSV, detects recurring charges and evidence-backed recovery leads, and walks a case from review to an approved draft. Refunds count only after a matching credit or a refund you confirm. This preview does not contact merchants, move money, or charge a card.
+The offer is “Check if companies owe you money.” A free scan finds evidence-backed leads. Pro ($14.99/month) and Family ($24.99/month) are the ongoing protection plans. The app imports a sample household or a transaction CSV, detects recurring charges and recovery leads, and walks a case from review to an approved draft. Refunds count only after a matching credit or a refund you confirm. This preview does not contact merchants, move money, or charge a card.
 
 ## Run
 

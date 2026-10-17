@@ -73,8 +73,10 @@ export function reduce(state: AppState, action: Action, now: string): AppState {
         null,
         "Changed plan",
         action.plan === "free"
-          ? "Returned to the free plan. This preview does not charge a card."
-          : "Selected a Plus plan in this preview. No card was charged.",
+          ? "Returned to the free scan. This preview does not charge a card."
+          : action.plan === "family"
+            ? "Selected MoneyBack Family in this preview. No card was charged."
+            : "Selected MoneyBack Pro in this preview. No card was charged.",
         null,
         now,
         "Updated",

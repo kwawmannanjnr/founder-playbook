@@ -44,8 +44,8 @@ export default function Welcome() {
         </View>
         <Eyebrow>MoneyBack AI</Eyebrow>
       </View>
-      <Title>You might be leaving money on the table.</Title>
-      <Body>MoneyBack AI finds billing mistakes, forgotten subscriptions, and potential refunds.</Body>
+      <Title>Check if companies owe you money.</Title>
+      <Body>MoneyBack AI is a financial protection agent. It finds billing mistakes, forgotten subscriptions, and potential refunds, then keeps watching so the next one does not slip past.</Body>
       <Card>
         <Text style={styles.cardLabel}>From a sample household, not a promise</Text>
         {EXAMPLES.map(([amount, label]) => (
@@ -59,6 +59,7 @@ export default function Welcome() {
         <Text style={styles.rule}>Evidence is attached to every finding.</Text>
         <Text style={styles.rule}>You approve every recovery request.</Text>
         <Text style={styles.rule}>Nothing counts as recovered until it is verified.</Text>
+        <Text style={styles.rule}>A subscription is for ongoing protection, not a single refund.</Text>
       </View>
     </Screen>
   );
